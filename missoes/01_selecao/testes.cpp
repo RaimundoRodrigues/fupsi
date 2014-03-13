@@ -221,5 +221,12 @@ int main()
 	test_ambos_3_ou_ambos_5();
 	test_restos_iguais();
 
+
+	t.total();
  	return 0;
 }
+
+
+
+
+
