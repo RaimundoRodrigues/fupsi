@@ -40,7 +40,7 @@ void test_valor_maximo4()
     t.add(valor_maximo4(1,6,5,3) == 6);
     t.add(valor_maximo4(-1,6,8,2) == 8);
     t.add(valor_maximo4(1,9,15,0) == 15);
-    t.add(valor_maximo4(-6,-5,-4,-3) == -6);
+    t.add(valor_maximo4(-6,-5,-4,-3) == -3);
     t.add(valor_maximo4(500,-100,300,200) == 500);
     t.close();
 }
@@ -100,8 +100,8 @@ void test_eh_mult()
 {
     t.open("eh_mult",1);
     t.add(eh_mult(4,2) == true);
-    t.add(eh_mult(3,27) == true);
-    t.add(eh_mult(5,30) == true);
+    t.add(eh_mult(27,3) == true);
+    t.add(eh_mult(5,30) == false);
     t.add(eh_mult(4,9) == false);
     t.close();
 }
@@ -134,10 +134,10 @@ void test_satisfaz_situacao()
 
     t.open("satisfaz_situacao", 1);
     t.add(satisfaz_situacao(199, 0) == 1);
-    t.add(satisfaz_situacao(55,-2) == 1);
+    t.add(satisfaz_situacao(55,-2) == 0);
     t.add(satisfaz_situacao(-9, 35) == 0);
     t.add(satisfaz_situacao(100, 9) == 0);
-    t.add(satisfaz_situacao(80, -5) == 1);
+    t.add(satisfaz_situacao(80, 0) == 1);
     t.close();
 }
 
@@ -156,7 +156,7 @@ void test_operacao()
     t.open("operacao", 1);
     t.add(operacao(4) == 20);
     t.add(operacao(-3) == -6);
-    t.add(operacao(3) == 15);
+    t.add(operacao(3) == 0);
     t.add(operacao(-15) == -18);
     t.add(operacao(-5) == -8);
     t.close();
@@ -167,10 +167,10 @@ void test_operacao2()
 {
     t.open("operacao2", 1);
     t.add(operacao2(4,2) == 0);
-    t.add(operacao2(5,3) == 1);
-    t.add(operacao2(8,5) == 3);
-    t.add(operacao2(21,4) == 1);
-    t.add(operacao2(17,6) == 5);
+    t.add(operacao2(5,3) == 5);
+    t.add(operacao2(8,5) == 12);
+    t.add(operacao2(21,4) == 21);
+    t.add(operacao2(17,6) == 85);
     t.close();
 }
 
@@ -181,7 +181,7 @@ void test_ambos_3_ou_ambos_5()
     t.add(ambos_3_ou_ambos_5(100,20) == true);
     t.add(ambos_3_ou_ambos_5(35,10) == true);
     t.add(ambos_3_ou_ambos_5(18,5) == false);
-    t.add(ambos_3_ou_ambos_5(21,30) == false);
+    t.add(ambos_3_ou_ambos_5(21,29) == false);
     t.close();
 }
 
@@ -194,6 +194,17 @@ void test_restos_iguais( )
     t.add(restos_iguais(18,5,19,4) == true);
     t.add(restos_iguais(24,7,35,32) == true);
     t.add(restos_iguais(25,6, 8,3) == false);
+    t.close();
+}
+
+void test_div_35()
+{
+	t.open("div35",1);
+    t.add(div_35(3) == 1 );
+    t.add(div_35(6) == 1);
+    t.add(div_35(10) == 2);
+    t.add(div_35(15) == 3);
+    t.add(div_35(30) == 3);
     t.close();
 }
 
@@ -220,6 +231,7 @@ int main()
 	test_ambos_3_ou_ambos_5();
 	test_ambos_3_ou_ambos_5();
 	test_restos_iguais();
+	test_div_35();
 
 
 	t.total();
