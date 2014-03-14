@@ -41,7 +41,7 @@ void Testa_bacteria()
 void Testa_soma_divisiveis()
 {
 	t.open("soma_divisiveis",2);
-	t.add(soma_divisiveis() == 5688);
+	t.add(soma_divisiveis() == 70704);
 	t.close();
 }
 
