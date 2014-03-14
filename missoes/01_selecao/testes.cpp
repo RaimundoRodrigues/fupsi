@@ -156,7 +156,7 @@ void test_operacao()
     t.open("operacao", 1);
     t.add(operacao(4) == 20);
     t.add(operacao(-3) == -6);
-    t.add(operacao(3) == 0);
+    t.add(operacao(3) == 15);
     t.add(operacao(-15) == -18);
     t.add(operacao(-5) == -8);
     t.close();
