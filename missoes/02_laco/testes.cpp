@@ -34,14 +34,14 @@ void Testa_bacteria()
 	t.add(bacteria(0) == 1);
 	t.add(bacteria(1) == 2);
 	t.add(bacteria(2) == 4);
-	t.add(bacteria(13) == 8192);
+	t.add(bacteria(4) == 16);
 	t.close();
 }
 
 void Testa_soma_divisiveis()
 {
 	t.open("soma_divisiveis",2);
-	t.add(soma_divisiveis() == 70704);
+	t.add(soma_divisiveis() == 5688);
 	t.close();
 }
 
@@ -83,22 +83,22 @@ void Testa_soma_primos()
 	
 }
 
-void Testa_primo_menos_nao_primo()
+void Testa_nao_primo_menos_primo()
 {
 	t.open("primo_menos_nao_primo",2);
-	t.add(primo_menos_nao_primo(0) == 0);
-	t.add(primo_menos_nao_primo(1) == 1);
-	t.add(primo_menos_nao_primo(2) == -1);
-	t.add(primo_menos_nao_primo(3) == -4);
-	t.add(primo_menos_nao_primo(4) == 0);
-	t.add(primo_menos_nao_primo(173) == 8877);
+	t.add(nao_primo_menos_primo(0) == 0);
+	t.add(nao_primo_menos_primo(1) == 1);
+	t.add(nao_primo_menos_primo(2) == -1);
+	t.add(nao_primo_menos_primo(3) == -4);
+	t.add(nao_primo_menos_primo(4) == 0);
+	t.add(nao_primo_menos_primo(173) == 8877);
 	t.close();
 }
 
 void Testa_potencia()
 {
 	t.open("potencia",2);
-	t.add(potencia(0,0) == 0);
+	t.add(potencia(0,0) == 1);
 	t.add(potencia(0,1) == 0);
 	t.add(potencia(1,2) == 1);
 	t.add(potencia(2,1) == 2);
@@ -125,7 +125,7 @@ void Testa_eh_quadrado_perfeito()
 void Testa_fatorial()
 {
 	t.open("fatorial",2);
-	t.add(fatorial(0) == 0);
+	t.add(fatorial(0) == 1);
 	t.add(fatorial(1) == 1);
 	t.add(fatorial(2) == 2);
 	t.add(fatorial(3) == 6);
@@ -174,7 +174,7 @@ void Testa_sequencia_4()
 	t.add(sequencia_4(2) == -6);
 	t.add(sequencia_4(3) == 15);
 	t.add(sequencia_4(4) == -42);
-	t.add(sequencia_4(1234) == -918701100);
+	t.add(sequencia_4(1234) == 175519706);
 	t.close();
 }
 
@@ -187,7 +187,7 @@ int main(){
 	Testa_eh_primo();
 	Testa_primeiros_primos();
 	Testa_soma_primos();
-	Testa_primo_menos_nao_primo();
+	Testa_nao_primo_menos_primo();
 	Testa_potencia();
 	Testa_eh_quadrado_perfeito();
 	Testa_fatorial();
