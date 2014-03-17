@@ -3,14 +3,14 @@
 
 Tester t;
 
-void Testa_soma_1_a_10()
+void testa_soma_1_a_10()
 {
 	t.open("soma_1_a_10",1);
 	t.add(soma_1_a_10() == 55);
 	t.close();
 }
 
-void Testa_somatorio()
+void testa_somatorio()
 {
 	t.open("somatorio",1);
 	t.add(somatorio(0) == 0);
@@ -21,31 +21,31 @@ void Testa_somatorio()
 	t.close();
 }
 
-void Testa_impares_3_500()
+void testa_impares_3_500()
 {
 	t.open("impares_3_500",2);
 	t.add(impares_3_500() == 83);
 	t.close();
 }
 
-void Testa_bacteria()
+void testa_bacteria()
 {
 	t.open("bacteria",1);
 	t.add(bacteria(0) == 1);
 	t.add(bacteria(1) == 2);
 	t.add(bacteria(2) == 4);
-	t.add(bacteria(4) == 16);
+	t.add(bacteria(13) == 8192);
 	t.close();
 }
 
-void Testa_soma_divisiveis()
+void testa_soma_divisiveis()
 {
 	t.open("soma_divisiveis",2);
 	t.add(soma_divisiveis() == 70002);
 	t.close();
 }
 
-void Testa_eh_primo()
+void testa_eh_primo()
 {
 	t.open("eh_primo",1);
 	t.add(eh_primo(0) == false);
@@ -57,7 +57,7 @@ void Testa_eh_primo()
 	t.close();
 }
 
-void Testa_primeiros_primos()
+void testa_primeiros_primos()
 {
 	t.open("primeiros_primos",1);
 	t.add(primeiros_primos(0) == 0);
@@ -70,7 +70,7 @@ void Testa_primeiros_primos()
 	t.close();
 }
 
-void Testa_soma_primos()
+void testa_soma_primos()
 {
 	t.open("soma_primos",1);
 	t.add(soma_primos(0) == 0);
@@ -80,10 +80,9 @@ void Testa_soma_primos()
 	t.add(soma_primos(4) == 5);
 	t.add(soma_primos(173) == 3087);
 	t.close();
-	
 }
 
-void Testa_nao_primo_menos_primo()
+void testa_nao_primo_menos_primo()
 {
 	t.open("primo_menos_nao_primo",2);
 	t.add(nao_primo_menos_primo(0) == 0);
@@ -95,10 +94,9 @@ void Testa_nao_primo_menos_primo()
 	t.close();
 }
 
-void Testa_potencia()
+void testa_potencia()
 {
 	t.open("potencia",2);
-	t.add(potencia(0,0) == 1);
 	t.add(potencia(0,1) == 0);
 	t.add(potencia(1,2) == 1);
 	t.add(potencia(2,1) == 2);
@@ -108,7 +106,7 @@ void Testa_potencia()
 	t.close();
 }
 
-void Testa_eh_quadrado_perfeito()
+void testa_eh_quadrado_perfeito()
 {
 	t.open("eh_quadrado_perfeito",2);
 	t.add(eh_quadrado_perfeito(0) == false);
@@ -122,10 +120,9 @@ void Testa_eh_quadrado_perfeito()
 	t.close();
 }
 
-void Testa_fatorial()
+void testa_fatorial()
 {
 	t.open("fatorial",2);
-	t.add(fatorial(0) == 1);
 	t.add(fatorial(1) == 1);
 	t.add(fatorial(2) == 2);
 	t.add(fatorial(3) == 6);
@@ -134,7 +131,7 @@ void Testa_fatorial()
 	t.close();
 }
 
-void Testa_sequencia_1()
+void testa_sequencia_1()
 {
 	t.open("sequencia_1",1);
 	t.add(sequencia_1(1) == 1);
@@ -145,7 +142,7 @@ void Testa_sequencia_1()
 	t.close();
 }
 
-void Testa_sequencia_2()
+void testa_sequencia_2()
 {
 	t.open("sequencia_2",2);
 	t.add(sequencia_2(1) == 1);
@@ -156,7 +153,7 @@ void Testa_sequencia_2()
 	t.close();
 }
 
-void Testa_sequencia_3()
+void testa_sequencia_3()
 {
 	t.open("sequencia_3",1);
 	t.add(sequencia_3(1) == 2);
@@ -167,34 +164,38 @@ void Testa_sequencia_3()
 	t.close();
 }
 
-void Testa_sequencia_4()
+void testa_sequencia_4()
 {
 	t.open("sequencia_4",3);
 	t.add(sequencia_4(1) == 3);
 	t.add(sequencia_4(2) == -6);
 	t.add(sequencia_4(3) == 15);
 	t.add(sequencia_4(4) == -42);
+	t.add(sequencia_4(5) == 123);
+	t.add(sequencia_4(6) == -366);
+	t.add(sequencia_4(7) == 1095);
+	t.add(sequencia_4(8) == -3282);
 	t.add(sequencia_4(1234) == 175519706);
 	t.close();
 }
 
 int main(){
-	Testa_soma_1_a_10();
-	Testa_somatorio();
-	Testa_impares_3_500();
-	Testa_bacteria();
-	Testa_soma_divisiveis();
-	Testa_eh_primo();
-	Testa_primeiros_primos();
-	Testa_soma_primos();
-	Testa_nao_primo_menos_primo();
-	Testa_potencia();
-	Testa_eh_quadrado_perfeito();
-	Testa_fatorial();
-	Testa_sequencia_1();
-	Testa_sequencia_2();
-	Testa_sequencia_3();
-	Testa_sequencia_4();
+	testa_soma_1_a_10();
+	testa_somatorio();
+	testa_impares_3_500();
+	testa_bacteria();
+	testa_soma_divisiveis();
+	testa_eh_primo();
+	testa_primeiros_primos();
+	testa_soma_primos();
+	testa_nao_primo_menos_primo();
+	testa_potencia();
+	testa_eh_quadrado_perfeito();
+	testa_fatorial();
+	testa_sequencia_1();
+	testa_sequencia_2();
+	testa_sequencia_3();
+	testa_sequencia_4();
 	t.total();
 	return 0;
 }

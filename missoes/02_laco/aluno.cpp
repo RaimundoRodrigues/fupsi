@@ -36,7 +36,17 @@ por 3 mas que não sejam divisíveis por 7.
 */
 int soma_divisiveis()
 {
-    return 0;
+	int qtd = 0;
+	int acc = 0;
+	for ( int i =0 ; qtd < 200; i++ )
+	{
+		if (( i % 7 != 0 ) && (i % 3 == 0))
+		{
+			qtd++;
+			acc += i;
+		}	
+	}
+    return acc;
 }
 
 //1pt
@@ -64,7 +74,7 @@ int soma_primos(int num)
 Dado um inteiro N como entrada, determinar no conjunto {1 · · · N} a soma
 de todos os não-primos subtraída da soma dos primos.
 */
-int primo_menos_nao_primo(int num)
+int nao_primo_menos_primo(int num)
 {
     return 0;
 }
