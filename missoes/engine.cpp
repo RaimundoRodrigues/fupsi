@@ -9,6 +9,9 @@
 
 using namespace std;
 
+
+#ifdef __unix__                    /* __unix__ is usually defined by compilers targeting Unix systems */
+
 #define GREEN "\033[1;32m"
 #define YELLOW "\033[1;33m"
 #define BLUE  "\033[1;32m"
@@ -17,6 +20,21 @@ using namespace std;
 #define RESET "\033[0m"
 #define BACKBLACK "\033[30m"
 #define CLS "\033[2J"
+
+#elif defined(_WIN32) || defined(WIN32)     /* _Win32 is usually defined by compilers targeting 32 or   64 bit Windows systems */
+
+#define GREEN ""
+#define YELLOW ""
+#define BLUE  ""
+#define RED   ""
+#define DEF   ""
+#define RESET ""
+#define BACKBLACK ""
+#define CLS ""
+
+#endif
+
+
 
 #define NAME_SIZE 20
 #define TESTS_SIZE 20

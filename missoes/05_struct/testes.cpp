@@ -202,6 +202,31 @@ void test_esta_contido()
 	t.close();
 }
 
+void test_inserir2()
+{
+    t.open("Inserir 2.0", 2);
+    {
+        dados2 d = {{{2,1}, {1,1}, {6,2}, {0,0}, {0,0}}, 5, 3};
+        t.add(inserir2(d, 10) == true);
+        t.add(d.comprimento == 4);
+        t.add(d.vetor[3].numero == 10);
+        t.add(d.vetor[3].frequencia == 1);
+        t.add(inserir2(d, 10) == true);
+        t.add(d.comprimento == 4);
+        t.add(d.vetor[3].frequencia == 2);
+    }
+    {
+        dados2 d = {{{2,1}, {1,1}, {6,2}, {10,2}, {5,3}}, 5, 5};
+        t.add(inserir2(d, 1) == true);
+        t.add(d.comprimento == 5);
+        t.add(d.vetor[1].numero == 1);
+        t.add(d.vetor[1].frequencia == 2);
+        t.add(inserir2(d, 15) == false);
+        t.add(d.comprimento == 5);
+    }
+    t.close();
+}
+
 int main()
 {
     test_soma();
@@ -220,6 +245,7 @@ int main()
     test_inserir();
     test_remover();
     test_esta_contido();
+    test_inserir2();
     t.total();
     return 0;
 }
